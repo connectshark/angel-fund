@@ -19,6 +19,9 @@
           </NuxtLink>
         </li>
       </ul>
+      <div class=" text-center pt-4">
+        <NuxtLink class=" text-sm underline" :to="`/forum/${topics.forumId}`">全 {{ topics.forumName }}文章</NuxtLink>
+      </div>
     </section>
   </div>
 </NuxtLayout>

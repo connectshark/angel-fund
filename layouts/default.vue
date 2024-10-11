@@ -10,7 +10,7 @@
     <nav>
       <ul>
         <li>
-          <NuxtLink to="/angle">天使文</NuxtLink>
+          <NuxtLink to="/forum/43">天使文</NuxtLink>
         </li>
       </ul>
     </nav>

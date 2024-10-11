@@ -1,14 +1,15 @@
 <template>
   <NuxtLayout>
-    <h1 class="text-center text-3xl/loose font-title mb-8">天使會文章大全</h1>
+    <h1 v-if="Array.isArray(data.list)" class="text-center text-3xl/loose font-title mb-8">全 {{ data.list[0].forumName }}文章</h1>
+    <h1 class="text-center text-3xl/loose font-title mb-8" v-else>無主題</h1>
     <div class="*:inline-block *:w-6 text-center *:bg-gray-50 divide-x mb-10">
       <button type="button" :disabled="status === 'pending'" v-if="data.page !== 1" @click="page--"><i class='bx bx-chevron-left' ></i></button>
       <span v-if="status === 'pending'"><i class='bx bx-loader bx-spin' ></i></span>
       <span v-else>{{ data.page }}</span>
       <button type="button" :disabled="status === 'pending'" v-if="data.hasMorePages" @click="page++"><i class='bx bx-chevron-right'></i></button>
     </div>
-    <ul class="mx-auto w-11/12 max-w-3xl gap-4 columns-[10rem] space-y-8 mb-10">
-      <li class=" rounded bg-white p-2 overflow-hidden" v-for="(item, i) in data.list">
+    <ul v-if="Array.isArray(data.list)" class="mx-auto w-11/12 max-w-3xl gap-4 grid grid-cols-2 mb-10 *:rounded *:bg-white *:p-2 *:overflow-hidden *:h-fit">
+      <li v-for="(item, i) in data.list">
         <NuxtLink class="text-xl" :to="`/article/` + item.topicId">
           <figure v-if="item.imageUrl">
             <img class="aspect-video" :src="item.imageUrl" :alt="item.title">
@@ -20,6 +21,9 @@
         </NuxtLink>
       </li>
     </ul>
+    <div v-else class=" text-center">
+      <NuxtLink class=" underline" to="/">回首頁</NuxtLink>
+    </div>
     <div class="*:inline-block *:w-6 text-center *:bg-gray-50 divide-x">
       <button type="button" :disabled="status === 'pending'" v-if="data.page !== 1" @click="page--"><i class='bx bx-chevron-left' ></i></button>
       <span v-if="status === 'pending'"><i class='bx bx-loader bx-spin' ></i></span>
@@ -27,20 +31,20 @@
       <button type="button" :disabled="status === 'pending'" v-if="data.hasMorePages" @click="page++"><i class='bx bx-chevron-right'></i></button>
     </div>
   </NuxtLayout>
-  </template>
-  
-  <script setup>
-  
-  const page = ref(1)
-  
-  const {
-    data,
-    status
-  } = await useFetch(`/api/fund`, {
-    query: { page: page }
-  })
-  
-  useHead({
-    title: '天使會'
-  })
-  </script>
+</template>
+<script setup>
+const route = useRoute()
+const forum = route.params.forum
+const page = ref(1)
+
+const {
+  data,
+  status
+} = await useFetch(`/api/fund`, {
+  query: { page: page, forum: forum }
+})
+
+useHead({
+  title: '天使會'
+})
+</script>

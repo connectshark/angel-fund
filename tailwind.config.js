@@ -1,12 +1,11 @@
-const plugin = require('tailwindcss/plugin')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     'pages/**/*.vue',
     'content/**/**.md',
     'layouts/**/*.vue',
-    'components/**/**.vue'
+    'components/**/**.vue',
+    'error.vue'
   ],
   theme: {
     extend: {

@@ -45,6 +45,6 @@ const {
 })
 
 useHead({
-  title: '天使會'
+  title: Array.isArray(data.value.list) ? data.value.list[0].forumName : '無主題'
 })
 </script>

@@ -1,5 +1,5 @@
 export default defineAppConfig({
   site: {
-    title: '天使基金'
+    title: '超強基金'
   }
 })

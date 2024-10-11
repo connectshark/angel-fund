@@ -1,12 +1,19 @@
 <template>
 <header>
-  <div class="mx-auto py-3 w-11/12 max-w-4xl">
+  <div class="mx-auto py-3 w-11/12 max-w-4xl flex items-center justify-between">
     <h1>
       <NuxtLink class=" flex items-center gap-2 w-fit" to="/">
         <img class=" aspect-square w-10" src="../assets/img/logo.png" alt="logo">
         <span>{{ site.title }}</span>
       </NuxtLink>
     </h1>
+    <nav>
+      <ul>
+        <li>
+          <NuxtLink to="/angle">天使文</NuxtLink>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 <main class=" full-up pb-10">

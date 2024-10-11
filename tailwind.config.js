@@ -14,7 +14,8 @@ module.exports = {
         primary: 'rgb(var(--color-primary) / <alpha-value>)'
       },
       fontFamily: {
-        'main': [`Zen Maru Gothic`, 'system-ui', `Arial`, `Helvetica`, `sans-serif`, 'sans-serif', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas']
+        'title': [`Zen Maru Gothic`, 'system-ui', `Arial`, `Helvetica`, `sans-serif`, 'sans-serif', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas'],
+        'main': [`Noto Sans TC`, 'system-ui', `Arial`, `Helvetica`, `sans-serif`, 'sans-serif', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas'],
       }
     },
     

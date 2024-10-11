@@ -5,7 +5,7 @@
     <p class="text-right space-x-4">
       <span><i class='bx bxs-user-circle'></i>{{ data.data.extraData.topicPoster }}</span>
       <span class="bg-gray-200 text-xs">{{ data.data.extraData.forumName }}</span>
-      <span>{{ data.data.extraData.createdAt }}</span>
+      <span class=" text-xs">{{ data.data.extraData.createdAt }}</span>
     </p>
   </div>
   <article class="max-w-3xl mx-auto w-11/12 mb-20" v-html="markdownText"></article>

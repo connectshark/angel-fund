@@ -1,6 +1,6 @@
 <template>
 <NuxtLayout>
-  <h1 class="text-center text-3xl/loose font-title mb-8">全文章</h1>
+  <h1 class="text-center text-3xl/loose title mb-8">全文章</h1>
   <nav class="mx-auto w-11/12 max-w-3xl text-xs *:inline-block *:px-2 mb-10">
     <a v-for="item in data" :href="`#` + item.forumId">{{ item.forumName }}</a>
   </nav>
@@ -26,8 +26,7 @@
 
 <script setup>
 const {
-  data,
-  status
+  data
 } = await useFetch(`/api/topic`)
 
 useHead({

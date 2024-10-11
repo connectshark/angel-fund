@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   experimental: { payloadExtraction: false },
@@ -22,8 +22,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'stylesheet', href: 'https://unpkg.com/boxicons@latest/css/boxicons.min.css' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap' }
+        { rel: 'stylesheet', href: 'https://unpkg.com/boxicons@latest/css/boxicons.min.css' }
       ],
     }
   },

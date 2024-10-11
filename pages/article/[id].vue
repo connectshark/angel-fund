@@ -1,7 +1,7 @@
 <template>
 <NuxtLayout>
   <div class="py-5 w-11/12 mx-auto max-w-3xl">
-    <h2 class="font-title text-balance  text-center text-2xl/loose font-bold">{{ data.data.extraData.topicTitle }}</h2>
+    <h2 class="text-balance title text-center text-2xl/loose font-bold">{{ data.data.extraData.topicTitle }}</h2>
     <p class="text-right space-x-4">
       <span><i class='bx bxs-user-circle'></i>{{ data.data.extraData.topicPoster }}</span>
       <span class="bg-gray-200 text-xs">{{ data.data.extraData.forumName }}</span>

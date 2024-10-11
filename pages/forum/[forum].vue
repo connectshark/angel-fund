@@ -12,7 +12,7 @@
       <li v-for="(item, i) in data.list">
         <NuxtLink class="text-xl" :to="`/article/` + item.topicId">
           <figure v-if="item.imageUrl">
-            <img class="aspect-video object-center object-contain" :src="item.imageUrl" :alt="item.title">
+            <img loading="lazy" class="aspect-video object-center object-contain" :src="item.imageUrl" :alt="item.title">
           </figure>
           <h3 class="hover:underline text-sm">{{ item.title }}</h3>
           <p class="text-right text-xs *:inline-block space-x-1">

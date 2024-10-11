@@ -13,7 +13,7 @@
     <li  v-for="reply in replies">
       <div class=" flex items-center gap-2 mb-2">
         <figure>
-          <img class="aspect-square w-8 rounded-full object-center object-cover" :src="reply.avatar" alt="avatar">
+          <img loading="lazy" class="aspect-square w-8 rounded-full object-center object-cover" :src="reply.avatar" alt="avatar">
         </figure>
         <p>{{ reply.username }} <span class=" text-xs">{{ reply.time }}</span></p>
       </div>

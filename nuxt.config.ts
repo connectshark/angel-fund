@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   experimental: { payloadExtraction: false },
   tailwindcss: {
     viewer: false

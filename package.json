@@ -1,7 +1,21 @@
 {
-  "name": "fundbot",
-  "private": true,
+  "name": "angel-fund",
+  "description": "強基金",
+  "version": "1.0.0",
   "type": "module",
+  "author": {
+    "name": "Chambers",
+    "email": "contact@nosegates.com",
+    "url": "https://github.com/connectshark"
+  },
+  "repository": {
+    "url": "https://github.com/connectshark/angel-fund",
+    "type": "github"
+  },
+  "homepage": "https://angel-fund.zeabur.app",
+  "bugs": {
+    "url": "https://github.com/connectshark/angel-fund/issues/new"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

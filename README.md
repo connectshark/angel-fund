@@ -11,11 +11,11 @@
 
 ## 截圖
 
-![](/readme/cover.png)
+[![](/readme/cover.png)](https://stackblitz.com/github/connectshark/angel-fund)
 
 ## DEMO
 
-[線上DEMO](https://angel-fund.zeabur.app)
+[線上DEMO](https://stackblitz.com/github/connectshark/angel-fund)
 
 
 ## 技術
